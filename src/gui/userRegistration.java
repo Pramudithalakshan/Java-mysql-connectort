@@ -49,15 +49,15 @@ public class userRegistration extends javax.swing.JFrame {
 
                 vector.add(resultSet.getString("user_id"));
                 vector.add(resultSet.getString("first_name"));
-                vector.add(resultSet.getString("lastt_name"));
-                vector.add(resultSet.getString("user_nmae"));
+                vector.add(resultSet.getString("last_name"));
+                vector.add(resultSet.getString("user_name"));
                 vector.add(resultSet.getString("password"));
                 vector.add(resultSet.getString("gender_id"));
                 vector.add(resultSet.getString("country_id"));
-                
-                 DefaultTableModel dtm = (DefaultTableModel)jTable1.getModel();
-                 dtm.addRow(vector);
-                 jTable1.setModel(dtm);
+
+                DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
+                dtm.addRow(vector);
+                jTable1.setModel(dtm);
 
             }
 
@@ -70,8 +70,8 @@ public class userRegistration extends javax.swing.JFrame {
 
     private void reset() {
         jTextField1.setText("");
-        jTextField1.setText("");
-        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
         jPasswordField1.setText("");
         jComboBox1.setSelectedIndex(0);
 
@@ -150,6 +150,24 @@ public class userRegistration extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("User Registration");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("First Name");
 
@@ -317,6 +335,7 @@ public class userRegistration extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
@@ -373,6 +392,21 @@ public class userRegistration extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        jTextField2.grabFocus();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        jTextField3.grabFocus();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        jPasswordField1.grabFocus();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
